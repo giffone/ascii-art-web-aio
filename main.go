@@ -6,12 +6,13 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 )
 
-const port string = ":8080"
+// const port string = ":8080"
 
 func main() {
-	// port := os.Getenv("PORT")
+	port := os.Getenv("PORT")
 	memory := router.NewHandlerArt()
 	r := router.NewRouter(memory)
 
